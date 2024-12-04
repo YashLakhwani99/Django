@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    All Chai
+{% endblock %}
+{% block content %}
+<h1>All Chai for you</h1>
+    <div class = "grid grid-cols-3 gap-4 m-4">
+        {% for chai in chais %}
+            <div class = "bg-green-100 p-5 rounded">
+                <img class = "rounded shadow-lg" src="{{chai.image.url}}" alt="">
+                <h3 class = "text-2xl font-bold text-emerald-800" >{{chai.name}}</h3>  
+                <a href="{% url 'chai_detail' chai.id %}">
+                    <button type = "button"
+                     class = "inline-flex w-[100%] mt-2 mb-2 items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
+                        {{chai.type}} - {{chai.id}}
+                    </button>
+                </a>              
+            </div> 
+        {% endfor %}
+    </div>
+{% endblock  %}
+
