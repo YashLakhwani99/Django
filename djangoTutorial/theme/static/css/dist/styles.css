@@ -820,20 +820,12 @@ select {
   display: grid;
 }
 
-.h-48 {
-  height: 12rem;
+.h-80 {
+  height: 20rem;
 }
 
 .h-screen {
   height: 100vh;
-}
-
-.h-60 {
-  height: 15rem;
-}
-
-.h-80 {
-  height: 20rem;
 }
 
 .w-\[100\%\] {
